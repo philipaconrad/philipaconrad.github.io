@@ -1,0 +1,197 @@
+/* Stylesheet for philipaconrad.github.io
+*/
+
+/* Load the fonts! */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+header {
+    margin: 0;
+    height: 45px;
+    width: 100%;
+    background-color: #fafafa;
+    border-bottom: 2px solid #aaa;
+    overflow: hidden;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    font-size: 15px;
+    color: #4b505a;
+    line-height: 24px;
+    text-rendering: optimizeLegibility;
+    background-color: #fafafa;/*#5995da;*/
+}
+
+article {
+    font-family: Lato Light;
+    font-size: 15px;
+    background-color: #ffffff;
+    padding: 5px 20px 20px 30px;
+    margin: 0px auto 15px;
+    /*border-radius: 5px;*/
+
+    -moz-box-shadow:    3px 3px 5px 3px #ccc;
+    -webkit-box-shadow: 3px 3px 5px 3px #ccc;
+    box-shadow:         3px 3px 5px 3px #ccc;
+}
+
+blockquote {
+    margin-left: 0px;
+    padding-left: 15px;
+    border-left: solid 4px #ccc;
+    color: #555;
+}
+
+hr {
+    display: block;
+    width: 75px;
+    margin: 20px auto 20px;
+    clear: both;
+}
+
+/* Typography! */
+h1 {
+    font-size: 2em;
+    line-height: 110%;
+    margin: 1.0rem 0 1.0rem 0;
+}
+
+h1.title {
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.6em;
+    line-height: 110%;
+    margin: 1.78rem 0 1.424rem 0;
+}
+
+h3 {
+    font-size: 1.2em;
+    line-height: 110%;
+    margin: 1.46rem 0 1.168rem 0;
+}
+
+h4 {
+    font-size: 1.0em;
+    line-height: 110%;
+    margin: 1.14rem 0 .912rem 0;
+}
+
+h5 {
+    font-size: 0.75em;
+    line-height: 110%;
+    margin: .82rem 0 .656rem 0;
+}
+
+h6 {
+    font-size: 0.6em;
+    line-height: 110%;
+    margin: .5rem 0 .4rem 0;
+}
+
+p {
+    margin: 0 0 10px;
+}
+
+p.author, p.date {
+    margin-bottom: 15px;
+}
+
+/* Lists! */
+ul {
+    list-style-type: circle;
+    margin-left: 20px;
+}
+
+li {
+    margin-bottom: 5px;
+
+}
+
+/* Links! */
+a:focus {
+	outline: thin dotted;
+	outline: 5px auto -webkit-focus-ring-color;
+	outline-offset: -2px;
+}
+
+a:focus, a:hover {
+	color: #23527c;
+	text-decoration: underline;
+}
+
+a, a:visited {
+	color: #eb2344;
+	text-decoration: none;
+	transition: all 0.2s ease-out;
+}
+
+a {
+	margin: 0;
+	padding: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+
+
+/* Nav display
+   Cite: https://www.w3schools.com/css/css_navbar.asp
+*/
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #82b1ff;
+}
+
+nav ul li {
+    float: left;
+    margin-bottom: 0px;
+}
+
+nav li a {
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 16px;
+    text-decoration: none;
+}
+
+nav li a:visited {
+    color: #ffffff;
+}
+
+/* Change the link color to #111 (black) on hover */
+nav li a:hover {
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #5f9bff;
+}
+
+
+/* Mobile Styles */
+@media only screen and (max-width: 400px) {
+  article {
+    width: 100%;
+    -moz-box-shadow:    none;
+    -webkit-box-shadow: none;
+    box-shadow:         none;
+  }
+}
+
+/* Tablet Styles */
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+  article {
+    width: 100%;
+  }
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 961px) {
+  article {
+    width: 800px;
+  }
+}
