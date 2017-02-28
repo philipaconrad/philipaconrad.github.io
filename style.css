@@ -4,15 +4,6 @@
 /* Load the fonts! */
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
-header {
-    margin: 0;
-    height: 45px;
-    width: 100%;
-    background-color: #fafafa;
-    border-bottom: 2px solid #aaa;
-    overflow: hidden;
-}
-
 body {
     font-family: "Open Sans", sans-serif;
     font-size: 15px;
@@ -143,8 +134,9 @@ nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    overflow: auto;
     background-color: #82b1ff;
+    border-bottom: 2px solid #aaa;
 }
 
 nav ul li {
@@ -174,6 +166,9 @@ nav li a:hover {
 
 /* Mobile Styles */
 @media only screen and (max-width: 400px) {
+  nav li {
+    width: 100%;
+  }
   article {
     width: 100%;
     -moz-box-shadow:    none;
