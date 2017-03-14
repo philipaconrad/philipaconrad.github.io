@@ -126,6 +126,18 @@ a {
 	background: transparent;
 }
 
+/* Images! */
+
+.figure img {
+    display: block;
+    margin: 0 auto;
+}
+p.caption {
+    margin-top: 5px;
+    font-style: italic;
+    text-align: center;
+}
+
 
 /* Nav display
    Cite: https://www.w3schools.com/css/css_navbar.asp
