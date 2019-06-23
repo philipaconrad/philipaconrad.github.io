@@ -126,8 +126,31 @@ a {
 	background: transparent;
 }
 
-/* Images! */
+/* Code formatting! */
+pre {
+	width: 100%;
+	border: 1px solid #eee;
+	border-radius: 5px;
+	background-color: #f8f8f8;
+	overflow: hidden;
+	margin-bottom: 15px;
+}
 
+pre code {
+	width: 100%;
+	margin-top: 10px;
+	margin-left: 10px;
+	overflow: scroll;
+	z-index: 15;
+}
+
+code {
+	display: inline-block;
+	border-radius: 5px;
+	background-color: #f8f8f8;
+}
+
+/* Images! */
 .figure img {
     display: block;
     margin: 0 auto;
