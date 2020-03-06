@@ -29,9 +29,9 @@
 <h2 id="what-is-plymouth">What is Plymouth?</h2>
 <p><a href="https://www.freedesktop.org/wiki/Software/Plymouth">Plymouth</a> is the software behind the Ubuntu boot splash screen. It handles animating the loading dots, slapping the logo in the middle of the screen, and even the password dialog (if you have disk encryption set up). It also has a <a href="https://www.freedesktop.org/wiki/Software/Plymouth/Scripts/">scripting langugage</a>, which can be used to draw nearly arbitrary images to the boot splash screen, including PNG-format images, and text.</p>
 <h2 id="how-plymouth-does-stuff">How Plymouth does stuff</h2>
-<p>Plymouth is basically a scripting environment for bootup splash screens. It's primitive, but effective for this purpose.</p>
+<p>Plymouth is basically a scripting environment for bootup splash screens. It’s primitive, but effective for this purpose.</p>
 <h3 id="images-and-sprites">Images and Sprites</h3>
-<p>Plymouth does everything with images. This might be a bit surprising if you come from a background using other drawing APIs, like the HTML5 Canvas (which can draw basic shapes easily), or the 2D Cairo library's API.</p>
+<p>Plymouth does everything with images. This might be a bit surprising if you come from a background using other drawing APIs, like the HTML5 Canvas (which can draw basic shapes easily), or the 2D Cairo library’s API.</p>
 <p>To draw text, that text is first drawn into an image object, and then displayed later.</p>
 <p>Example:</p>
 <pre><code>warning_image = Image.Text (&quot;Some warning text for telling the user something.&quot;);</code></pre>
@@ -59,23 +59,22 @@ warning_sprite.SetOpacity (0.8); # 80% opacity.</code></pre>
 <h2 id="debugging-the-theme">Debugging the theme</h2>
 <p>When I went to tweak the Ubuntu boot up splash screen, I encountered a wonderful <a href="https://askubuntu.com/q/143330">AskUbuntu StackExchange question</a> about that exact topic. The top-rated <a href="https://askubuntu.com/a/147769">answer</a> there was excellent.</p>
 <h3 id="testing-out-a-plymouth-theme-without-rebooting">Testing out a Plymouth theme without rebooting</h3>
-<p>To run the following chain of commands, you'll need the <code>plymouth-x11</code> package installed.</p>
+<p>To run the following chain of commands, you’ll need the <code>plymouth-x11</code> package installed.</p>
 <p>It fires up a Plymouth instance (which will overwrite most of your screen) to show the default Plymouth theme, displaying the basic splash screen for 10 seconds, and then kills the Plymouth instance.</p>
 <pre><code>sudo plymouthd --debug --debug-file=/tmp/plymouth-debug-out ; sudo  plymouth --show-splash ; for ((I=0;I&lt;10;I++)); do sleep 1 ; sudo  plymouth --update=event$I ; done ; sudo  plymouth --quit</code></pre>
 <h3 id="update-the-boot-splash-screen-important">Update the boot splash screen (IMPORTANT)</h3>
-<p>You can make edits to a Plymouth theme script all day, but Ubuntu won't pick up those edits unless you update the <code>initramfs</code> it uses when it's booting.</p>
+<p>You can make edits to a Plymouth theme script all day, but Ubuntu won’t pick up those edits unless you update the <code>initramfs</code> it uses when it’s booting.</p>
 <p>This is done by running:</p>
 <pre><code>sudo update-initramfs -u</code></pre>
 <hr />
 <h2 id="why-was-i-messing-around-with-plymouth-anyway">Why was I messing around with Plymouth anyway?</h2>
 <p>I lost a laptop once. On it was several days-worth of uncommitted work files, along with a couple chapters of an unfinished sci-fi novella, and a few dozen MB of student code assignments still ungraded.</p>
-<p>The nice folks that found it returned it to me unscathed, after I proved I was the &quot;Philip Conrad&quot; shown on the login screen.</p>
+<p>The nice folks that found it returned it to me unscathed, after I proved I was the “Philip Conrad” shown on the login screen.</p>
 <p>After that event, I vowed to never use a machine for work without full-disk encryption. Full-disk encryption ensures that as long as the machine is powered off, the data on-disk is protected. For the threat models I think are realistic for me to defend against, this is a good security measure.</p>
 <p>However, it has one problem:</p>
-<div class="figure">
-<img src="images/ubuntu-budgie-fde-splash.png" alt="Ubuntu Budgie Full-Disk Encryption Splash Screen" />
-<p class="caption">Ubuntu Budgie Full-Disk Encryption Splash Screen</p>
-</div>
+<figure>
+<img src="images/ubuntu-budgie-fde-splash.png" alt="" /><figcaption>Ubuntu Budgie Full-Disk Encryption Splash Screen</figcaption>
+</figure>
 <p>Notice the lack of a username, display name, or normal customizeable desktop background? Without those things, how is a developer supposed to show normal people that they own their PC?</p>
 <hr />
 <h2 id="the-contact-information-hack">The Contact Information Hack</h2>
@@ -95,14 +94,13 @@ fun display_normal_callback ()
 }
 
 Plymouth.SetDisplayNormalFunction (display_normal_callback);</code></pre>
-<p>I added a function named <code>DisplayContactInfo</code>, based on related functions defined near the top of the script file. This function handles rendering text onto a Sprite that's offset slightly to the right of the center of the screen.</p>
-<p>Then, down in the <code>display_normal_callback</code> function, I call the <code>DisplayContactInfo</code> function to draw a looooooooooong multi-line block of text. In the example above, I've censored out my contact information with a dummy phone number and emails.</p>
-<p>Running live, here's what the dummy contact information looks like:</p>
-<div class="figure">
-<img src="images/ubuntu-budgie-fde-splash-with-contactinfo.png" alt="Ubuntu Budgie Full-Disk Encryption Splash Screen, with Contact Information" />
-<p class="caption">Ubuntu Budgie Full-Disk Encryption Splash Screen, with Contact Information</p>
-</div>
-<p>Since I use Ubuntu pretty heavily on my work machines, I'll probably be keeping this hack around for a while.</p>
+<p>I added a function named <code>DisplayContactInfo</code>, based on related functions defined near the top of the script file. This function handles rendering text onto a Sprite that’s offset slightly to the right of the center of the screen.</p>
+<p>Then, down in the <code>display_normal_callback</code> function, I call the <code>DisplayContactInfo</code> function to draw a looooooooooong multi-line block of text. In the example above, I’ve censored out my contact information with a dummy phone number and emails.</p>
+<p>Running live, here’s what the dummy contact information looks like:</p>
+<figure>
+<img src="images/ubuntu-budgie-fde-splash-with-contactinfo.png" alt="" /><figcaption>Ubuntu Budgie Full-Disk Encryption Splash Screen, with Contact Information</figcaption>
+</figure>
+<p>Since I use Ubuntu pretty heavily on my work machines, I’ll probably be keeping this hack around for a while.</p>
 <hr/>
 <footer>
 <p>Posted by
