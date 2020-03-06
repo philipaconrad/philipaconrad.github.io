@@ -155,8 +155,9 @@ code {
     display: block;
     margin: 0 auto;
 }
-p.caption {
+p.caption, figcaption {
     margin-top: 5px;
+    margin-bottom: 10px;
     font-style: italic;
     text-align: center;
 }
@@ -198,6 +199,21 @@ nav li a:hover {
     background-color: #5f9bff;
 }
 
+/* Flexbox grid */
+
+.grid {
+  display: flex;
+}
+
+.grid-cell {
+  flex: 1;
+}
+
+/* Slider */
+
+.slider {
+  width: 100%;
+}
 
 /* Mobile Styles */
 @media only screen and (max-width: 400px) {
