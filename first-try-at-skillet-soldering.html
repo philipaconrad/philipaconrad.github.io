@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <meta name="author" content="Philip Conrad">
+  <meta name="dcterms.date" content="2019-08-06">
+  <title>Reflow Soldering with a Skillet</title>
+  <style type="text/css">code{white-space: pre;}</style>
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="style.css">
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<nav>
+<ul>
+<li><a href="/">Philip Conrad</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="projects.html">Projects</a></li>
+<li><a href="https://github.com/philipaconrad">Github</a></li>
+</ul>
+</nav>
+<article>
+<h1 class="title">Reflow Soldering with a Skillet</h1>
+<hr/>
+<h2 id="some-background">Some background</h2>
+<p>To help out a relative with a project, I acquired a bunch of <a href="https://www.adafruit.com/product/2343">surface-mount LEDs</a>.</p>
+<figure>
+<img src="images/DotStar_5050_RGB_LEDs.jpg" alt="" /><figcaption>DotStar Addressable 5050 RGB LEDs. (Picture used under Fair Use from <a href="https://www.adafruit.com/product/2343">Adafruit</a>.)</figcaption>
+</figure>
+<p>The only problem with surface-mount components is that soldering them is a <em>pain</em>.</p>
+<p>The key issue is heating up all the little solder blobs simultaneously. A heat gun would blow away lighter components, and sans a reflow oven, how is one supposed to get all those solder blobs to liquefy simultaneously?</p>
+<p>Some folks might repurpose an old toaster oven, but me, I went all-out <a href="https://www.sparkfun.com/tutorials/59">skillet soldering</a>.</p>
+<h2 id="reflow-soldering-with-a-skillet">Reflow soldering with a skillet</h2>
+<p>You can do reflow soldering on top of your stove with just an old non-stick skillet.</p>
+<p>The general steps are:</p>
+<ul>
+<li>Tin the pads on your board. (Flux helps make this step easy and clean.)</li>
+<li>Warm up the component and the board in the skillet, as close to the reflow temperature profile as you can get.</li>
+<li>Apply flux to the component’s pads.</li>
+<li>Carefully place the component on top of the solder blobs.</li>
+</ul>
+<p>If all goes well, the solder blobs will glom onto the component’s pads, and the component will “float” on top of the solder.</p>
+<p><img src="images/5050-dev-board-in-skillet.jpg" /></p>
+<h2 id="flux-is-great">Flux is great</h2>
+<p>Solder bridges are nasty; multiple pads get gooed together with solder, and it’s <em>fun times</em> to try to clean up with just a soldering iron and no flux. Flux is your best friend when soldering.</p>
+<p>Flux comes in several forms, from pastes, to wires, to flux pens that dispense an alcohol-based flux solution, like this guy:</p>
+<figure>
+<img src="images/flux-pen.jpg" alt="" /><figcaption>Flux pen for rework.</figcaption>
+</figure>
+<p>Until this project, I didn’t understand what my electrical engineering friends were carrying on about regarding flux. After accidentally making four or five solder bridges–and fixing them with flux–I can attest that this stuff awesome.</p>
+<hr/>
+<footer>
+<p>Posted by
+ Philip Conrad 
+on <time datetime="">2019-08-06</time>
+</p>
+</footer>
+</article>
+</body>
+</html>
+
