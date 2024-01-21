@@ -1,0 +1,26 @@
+baseURL = 'https://blog.chariot-chaser.net/'
+languageCode = 'en-us'
+title = "Philip Conrad's Blog"
+theme = 'chariot-chaser'
+
+[menus]
+[[menus.main]]
+name = 'Philip Conrad'
+pageRef = '/'
+weight = 10
+[[menus.main]]
+name = 'Posts'
+pageRef = '/posts'
+weight = 20
+[[menus.main]]
+name = 'About'
+pageRef = '/about'
+weight = 30
+[[menus.main]]
+name = 'Projects'
+pageRef = '/projects'
+weight = 30
+[[menus.main]]
+name = 'Github'
+url = "https://github.com/philipaconrad"
+weight = 40

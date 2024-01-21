@@ -1,0 +1,6 @@
+name = "Chariot-Chaser"
+license = "MIT"
+description = "A horrifying fork of Vimux + bits from Andrew Zah's theme files."
+tags = ["blog", "plain", "blank", "starter", "development"]
+features = ["blog"]
+min_version = "0.20"

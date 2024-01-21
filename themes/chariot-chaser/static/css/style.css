@@ -1,0 +1,600 @@
+/*
+	HTML5 Reset :: style.css
+	----------------------------------------------------------
+	We have learned much from/been inspired by/taken code where offered from:
+
+	Eric Meyer					:: http://meyerweb.com
+	HTML5 Doctor				:: http://html5doctor.com
+	and the HTML5 Boilerplate	:: http://html5boilerplate.com
+
+-------------------------------------------------------------------------------*/
+
+/* Let's default this puppy out
+-------------------------------------------------------------------------------*/
+
+html,
+body,
+body div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+figure,
+footer,
+header,
+menu,
+nav,
+section,
+time,
+mark,
+audio,
+video,
+details,
+summary {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font-weight: normal;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+article,
+aside,
+figure,
+footer,
+header,
+nav,
+section,
+details,
+summary {
+    display: block;
+}
+
+/* Handle box-sizing while better addressing child elements:
+   http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+/* consider resetting the default cursor: https://gist.github.com/murtaugh/5247154 */
+
+/* Responsive images and other embedded objects */
+/* if you don't have full control over `img` tags (if you have to overcome attributes), consider adding height: auto */
+img,
+object,
+embed {
+    max-width: 100%;
+}
+
+/*
+   Note: keeping IMG here will cause problems if you're using foreground images as sprites.
+	In fact, it *will* cause problems with Google Maps' controls at small size.
+	If this is the case for you, try uncommenting the following:
+
+#map img {
+		max-width: none;
+}
+*/
+
+/* force a vertical scrollbar to prevent a jumpy page */
+html {
+    overflow-y: scroll;
+}
+
+/* we use a lot of ULs that aren't bulleted.
+	you'll have to restore the bullets within content,
+	which is fine because they're probably customized anyway */
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+a {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title],
+dfn[title] {
+    border-bottom: 1px dotted #000;
+    cursor: help;
+}
+
+/* tables still need cellspacing="0" in the markup */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+th {
+    font-weight: bold;
+    vertical-align: bottom;
+}
+
+td {
+    font-weight: normal;
+    vertical-align: top;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+input,
+select {
+    vertical-align: middle;
+}
+
+pre {
+    white-space: pre;
+    /* CSS2 */
+    white-space: pre-wrap;
+    /* CSS 2.1 */
+    white-space: pre-line;
+    /* CSS 3 (and 2.1 as well, actually) */
+    word-wrap: break-word;
+    /* IE */
+}
+
+input[type="radio"] {
+    vertical-align: text-bottom;
+}
+
+input[type="checkbox"] {
+    vertical-align: bottom;
+}
+
+.ie7 input[type="checkbox"] {
+    vertical-align: baseline;
+}
+
+.ie6 input {
+    vertical-align: text-bottom;
+}
+
+select,
+input,
+textarea {
+    font: 99% sans-serif;
+}
+
+table {
+    font-size: inherit;
+    font: 100%;
+}
+
+small {
+    font-size: 85%;
+}
+
+strong {
+    font-weight: bold;
+}
+
+td,
+td img {
+    vertical-align: top;
+}
+
+/* Make sure sup and sub don't mess with your line-heights http://gist.github.com/413930 */
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+}
+
+sup {
+    top: -0.5em;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+/* standardize any monospaced elements */
+pre,
+code,
+kbd,
+samp {
+    font-family: monospace, sans-serif;
+}
+
+/* hand cursor on clickable elements */
+.clickable,
+label,
+input[type=button],
+input[type=submit],
+input[type=file],
+button {
+    cursor: pointer;
+}
+
+/* Webkit browsers add a 2px margin outside the chrome of form elements */
+button,
+input,
+select,
+textarea {
+    margin: 0;
+}
+
+/* make buttons play nice in IE */
+button,
+input[type=button] {
+    width: auto;
+    overflow: visible;
+}
+
+/* scale images in IE7 more attractively */
+.ie7 img {
+    -ms-interpolation-mode: bicubic;
+}
+
+/* prevent BG image flicker upon hover
+   (commented out as usage is rare, and the filter syntax messes with some pre-processors)
+.ie6 html {filter: expression(document.execCommand("BackgroundImageCache", false, true));}
+*/
+
+/* let's clear some floats */
+.clearfix:before,
+.clearfix:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+
+/* Stylesheet for philipaconrad.github.io
+*/
+
+/* Load the fonts! */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+body {
+    font-family: "Open Sans", sans-serif;
+    font-size: 15px;
+    color: #4b505a;
+    line-height: 24px;
+    text-rendering: optimizeLegibility;
+    background-color: #fafafa;
+    /*#5995da;*/
+}
+
+article {
+    font-family: Lato Light;
+    font-size: 15px;
+    background-color: #ffffff;
+    padding: 5px 20px 20px 30px;
+    margin: 0px auto 15px;
+    /*border-radius: 5px;*/
+
+    -moz-box-shadow: 3px 3px 5px 3px #ccc;
+    -webkit-box-shadow: 3px 3px 5px 3px #ccc;
+    box-shadow: 3px 3px 5px 3px #ccc;
+}
+
+blockquote {
+    margin-left: 0px;
+    padding-left: 15px;
+    border-left: solid 4px #ccc;
+    color: #555;
+}
+
+/* hr {
+    display: block;
+    width: 75px;
+    margin: 20px auto 20px;
+    clear: both;
+} */
+
+hr {
+    border-top: 1px solid grey;
+}
+
+/* Typography! */
+h1 {
+    font-size: 2em;
+    line-height: 110%;
+    margin: 1.0rem 0 1.0rem 0;
+}
+
+h1.title {
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.6em;
+    line-height: 110%;
+    margin: 1.78rem 0 1.424rem 0;
+}
+
+h3 {
+    font-size: 1.2em;
+    line-height: 110%;
+    margin: 1.46rem 0 1.168rem 0;
+}
+
+h4 {
+    font-size: 1.0em;
+    line-height: 110%;
+    margin: 1.14rem 0 .912rem 0;
+}
+
+h5 {
+    font-size: 0.75em;
+    line-height: 110%;
+    margin: .82rem 0 .656rem 0;
+}
+
+h6 {
+    font-size: 0.6em;
+    line-height: 110%;
+    margin: .5rem 0 .4rem 0;
+}
+
+p {
+    margin: 0 0 10px;
+}
+
+p.author,
+p.date {
+    margin-bottom: 15px;
+}
+
+/* Lists! */
+ul {
+    list-style-type: circle;
+    margin-left: 20px;
+}
+
+li {
+    margin-bottom: 5px;
+
+}
+
+/* Links! */
+a:focus {
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+}
+
+a:focus,
+a:hover {
+    color: #23527c;
+    text-decoration: underline;
+}
+
+a,
+a:visited {
+    color: #eb2344;
+    text-decoration: none;
+    transition: all 0.2s ease-out;
+}
+
+a {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+/* Code formatting! */
+/* pre {
+    width: 100%;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+    overflow: hidden;
+    margin-bottom: 15px;
+} */
+
+/* pre code {
+    width: 100%;
+    margin-top: 10px;
+    margin-left: 10px;
+    overflow: scroll;
+    z-index: 15;
+}
+
+code {
+    display: inline-block;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+} */
+
+/* Images! */
+.figure img {
+    display: block;
+    margin: 0 auto;
+}
+
+p.caption,
+figcaption {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-style: italic;
+    text-align: center;
+}
+
+
+/* Nav display
+   Cite: https://www.w3schools.com/css/css_navbar.asp
+*/
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    background-color: #82b1ff;
+    border-bottom: 2px solid #aaa;
+}
+
+nav ul li {
+    float: left;
+    margin-bottom: 0px;
+}
+
+nav li a {
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 16px;
+    text-decoration: none;
+}
+
+nav li a:visited {
+    color: #ffffff;
+}
+
+/* Change the link color to #111 (black) on hover */
+nav li a:hover {
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #5f9bff;
+}
+
+/* Flexbox grid */
+
+.grid {
+    display: flex;
+}
+
+.grid-cell {
+    flex: 1;
+}
+
+/* Slider */
+
+.slider {
+    width: 100%;
+}
+
+/* Summary */
+
+.summary {
+    text-indent: 20px;
+}
+
+/* Text wrangling styles */
+
+.center {
+    text-align: center;
+}
+
+/* Mobile Styles */
+@media only screen and (max-width: 400px) {
+    nav li {
+        width: 100%;
+    }
+
+    article {
+        width: 100%;
+        -moz-box-shadow: none;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+}
+
+/* Tablet Styles */
+@media only screen and (min-width: 401px) and (max-width: 960px) {
+    article {
+        width: 100%;
+    }
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 961px) {
+    article {
+        width: 800px;
+    }
+}

@@ -1,0 +1,21 @@
+{{ define "main" }}
+<h1> {{ .Type }} </h1>
+
+<div class="listing">
+  {{- range (where .Site.RegularPages "Type" .Type ).GroupByDate "2006" -}}
+  <h3 style="font-weight: bold; text-decoration: none;"> {{ .Key }} </h3>
+  <ul>
+    {{- range .Pages }}
+    {{ partial "post-link.html" . }}
+    {{- end -}}
+  </ul>
+  {{- end -}}
+</div>
+
+{{/*
+{{- if (eq .Type "posts") -}}
+<hr>
+<p><a href="/archives"> Link to Archives </a></p>
+{{- end -}}
+*/}}
+{{ end }}
