@@ -205,13 +205,13 @@ select {
 }
 
 pre {
-    white-space: pre;
+    /* white-space: pre; */
     /* CSS2 */
-    white-space: pre-wrap;
+    white-space: pre;
     /* CSS 2.1 */
-    white-space: pre-line;
+    /* white-space: pre-line; */
     /* CSS 3 (and 2.1 as well, actually) */
-    word-wrap: break-word;
+    /* word-wrap: break-word; */
     /* IE */
 }
 
@@ -485,12 +485,33 @@ a {
     overflow: scroll;
     z-index: 15;
 }
+*/
 
-code {
+/* code {
     display: inline-block;
     border-radius: 5px;
     background-color: #f8f8f8;
 } */
+
+pre {
+    border-radius: 1em;
+    padding: 1em;
+    margin: 0;
+    margin-bottom: 1em;
+    overflow: auto;
+    border: 1px solid #272822;
+    background-color: #F9F9F9;
+}
+
+pre code {
+    overflow: scroll;
+}
+
+pre:hover {
+    -webkit-box-shadow: 0px 0px 10px 0px #777777;
+    -moz-box-shadow: 0px 0px 10px 0px #777777;
+    box-shadow: 0px 0px 10px 0px #777777;
+}
 
 /* Images! */
 .figure img {
@@ -573,6 +594,12 @@ nav li a:hover {
 
 /* Mobile Styles */
 @media only screen and (max-width: 400px) {
+    body {
+        -webkit-text-size-adjust: none;
+        -moz-text-size-adjust: none;
+        text-size-adjust: none;
+    }
+
     nav li {
         width: 100%;
     }
@@ -587,6 +614,12 @@ nav li a:hover {
 
 /* Tablet Styles */
 @media only screen and (min-width: 401px) and (max-width: 960px) {
+    body {
+        -webkit-text-size-adjust: none;
+        -moz-text-size-adjust: none;
+        text-size-adjust: none;
+    }
+
     article {
         width: 100%;
     }

@@ -2,6 +2,9 @@ baseURL = 'https://blog.chariot-chaser.net/'
 languageCode = 'en-us'
 title = "Philip Conrad's Blog"
 theme = 'chariot-chaser'
+pygmentsUseClasses = true
+pygmentsCodefences = true
+
 
 [menus]
 [[menus.main]]
@@ -24,3 +27,18 @@ weight = 30
 name = 'Github'
 url = "https://github.com/philipaconrad"
 weight = 40
+
+[markup.highlight]
+anchorLineNos = false
+codeFences = true
+guessSyntax = false
+hl_lines = ''
+hl_inline = false
+lineAnchors = ''
+lineNoStart = 1
+lineNos = false
+lineNumbersInTable = true
+noClasses = true
+noHl = false
+style = 'monokai'
+tabWidth = 4
