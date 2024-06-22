@@ -2,6 +2,10 @@
 title: "Aggregating Golang's gctrace Logs with Awk"
 date: 2024-06-15
 summary: "Intro to Golang gctrace logs + a helpful Awk script for aggregating them."
+tags:
+ - programming
+ - go
+ - awk
 ---
 
 # Introduction

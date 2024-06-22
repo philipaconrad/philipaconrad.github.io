@@ -2,6 +2,9 @@
 title: "Boot Splash Screen Hacking with Plymouth"
 date: 2019-07-22
 summary: "Controlling the boot splash screen to display custom text."
+tags:
+ - programming
+ - tutorial
 ---
 
 ## What is Plymouth?

@@ -2,6 +2,10 @@
 title: "Work Journaling"
 date: 2019-01-28
 summary: "Overview of my work journaling system, circa 2019."
+tags:
+ - programming
+ - workflow
+ - bash
 ---
 
 I started keeping a work journal as part of my work for [ASSET](http://asset-us.com/), back around June of 2018. Within about 2-3 days, I started another journal for my research work as part of [PASSLab](http://passlab.github.io/).

@@ -2,6 +2,11 @@
 title: "Hello World on the iCEstick"
 date: 2019-10-04
 summary: "A quick 'Hello World' blinkenlights tutorial for the iCEstick FGPA dev board."
+tags:
+ - electronics
+ - fpga
+ - verilog
+ - tutorial
 ---
 
 # The iCEstick FPGA board

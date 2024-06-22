@@ -2,6 +2,9 @@
 title: "First Try At Skillet Soldering"
 date: 2019-08-06
 summary: "An experiment in soldering surface-mount components to a PCB, without a reflow oven."
+tags:
+ - soldering
+ - electronics
 ---
 
 # Reflow Soldering with a Skillet
