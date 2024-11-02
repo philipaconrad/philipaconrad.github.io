@@ -9,11 +9,7 @@ tags:
 
 *These tips and tricks are extracted and expanded from my work notes, and are meant to serve more as a reference for me, than as a true standalone blog post with a full narrative structure and whatnot.*
 
-# Replacing dependencies in `go.mod`
-
- - Official Go docs:
-   - Go Modules Reference, [`replace` directive section](https://go.dev/ref/mod#go-mod-file-replace)
-   - `go.mod` File format Reference, [`replace` directive](https://go.dev/doc/modules/gomod-ref#replace)
+-----
 
 Go projects are built around a top-level `go.mod` (and `go.sum`) file that tracks the master list of all the package dependencies needed to build the project.
 Sometimes, you want to *replace* one of those packages with something else, maybe a homegrown alternative library, or a personal fork of some abandoned open source project.
@@ -47,3 +43,9 @@ Sometimes, you've got a local copy of a fork, and you want to point your `go.mod
     go mod edit -replace github.com/open-policy-agent/opa=../other-opa-module
 
 Run `go mod tidy`, and you're back in business!
+
+## Further Reading
+
+ - Official Go docs:
+   - Go Modules Reference, [`replace` directive section](https://go.dev/ref/mod#go-mod-file-replace)
+   - `go.mod` File format Reference, [`replace` directive](https://go.dev/doc/modules/gomod-ref#replace)
